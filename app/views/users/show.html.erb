@@ -12,11 +12,21 @@
   <%= @user.average_rating %>
 </p>
 
-<ul>
-  <% @user.ratings.each do |rating| %>
-    <li> <%= rating %> <%= link_to 'delete', rating, method: :delete, data: { confirm: 'Are you sure?' } %> </li>
-  <% end %>
-</ul>
+<p>
+  <ul>
+    <% @user.ratings.each do |rating| %>
+      <li> <%= rating %> <%= link_to 'delete', rating, method: :delete, data: { confirm: 'Are you sure?' } %> </li>
+    <% end %>
+  </ul>
+</p>
 
+<p>
+  <strong>beerclubs</strong>
+  <ul>
+    <% @user.beer_clubs.each do |b| %>
+      <li> <%= link_to b.name, b %> </li>
+    <% end %>
+  </ul>
+</p>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
