@@ -22,5 +22,6 @@
     Beer has <%= pluralize(@beer.ratings.count, 'rating') %>, average <%= @beer.average_rating %> 
   <% end %>
 </p>
+<%= link_to 'Destroy', @beer, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Edit', edit_beer_path(@beer) %> |
 <%= link_to 'Back', beers_path %>
