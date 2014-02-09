@@ -6,6 +6,8 @@ gem 'rails', '4.0.2'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 
+gem 'simplecov', require: false
+
 group :development, :test do
   gem 'sqlite3'
 end
@@ -13,6 +15,16 @@ end
 group :production do
    gem 'pg'
    gem 'rails_12factor' 
+end
+
+group :test do
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'launchy'
+end
+
+group :test do
+  gem 'rspec-rails', '~> 2.14.1'
 end
 
 # Use SCSS for stylesheets
