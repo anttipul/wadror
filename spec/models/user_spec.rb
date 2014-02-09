@@ -2,7 +2,7 @@ require 'spec_helper'
 
 #Huomioon raportissa
 BeerClubsController
-Brewery
+MembershipsController
 
 describe User do
   it "has the username set correctly" do
