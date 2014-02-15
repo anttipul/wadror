@@ -33,6 +33,13 @@
     <% end %>
   </ul>
 </p>
+
+<% if @user.ratings.any? %>
+    <p>Favorite beer: <%= @user.favorite_beer %> </p>
+    <p>Favorite brewery: <%= @user.favorite_brewery.name %> </p>
+    <p>Preferred style: <%= @user.favorite_style %> </p>
+<% end %>
+
 <% if @user == current_user %>
   <%= link_to 'Edit', edit_user_path(@user) %> |
   <%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' } %> |
