@@ -7,10 +7,12 @@ Ratebeer::Application.routes.draw do
   resources :breweries
   resources :sessions, only: [:new, :create]
   resources :ratings, only: [:index, :new, :create, :destroy]
+  resources :places, only:[:index, :show]
   root 'breweries#index'
   get 'kaikki_bisset', to: 'beers#index'
   get 'signup', to: 'users#new'
   get 'signin', to: 'sessions#new'
+  post 'places', to:'places#search'
   delete 'signout', to: 'sessions#destroy'
 
   #get 'ratings', to: 'ratings#index'

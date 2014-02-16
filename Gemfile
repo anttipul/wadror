@@ -8,6 +8,10 @@ gem 'rails', '4.0.2'
 
 gem 'simplecov', require: false
 
+gem 'httparty'
+
+gem "rails-settings-cached", "0.3.1"
+
 group :development, :test do
   gem 'sqlite3'
 end
@@ -21,6 +25,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'launchy'
+  gem 'webmock'
 end
 
 group :test do
